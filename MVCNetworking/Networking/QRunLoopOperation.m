@@ -352,7 +352,7 @@ XXX  7. init -> start -> cancel -> startOnRunLoopThreadThread -> cancelOnRunLoop
         runCancelOnRunLoopThread = ! oldValue && self.state == kQRunLoopOperationStateExecuting;
     }
     if (runCancelOnRunLoopThread) {
-        [self performSelector:@selector(cancelOnRunLoopThread) onThread:self.actualRunLoopThread withObject:nil waitUntilDone:YES modes:[self.actualRunLoopModes allObjects]];
+        [self performSelector:@selector(cancelOnRunLoopThread) onThread:self.actualRunLoopThread withObject:nil waitUntilDone:NO modes:[self.actualRunLoopModes allObjects]];
     }
 }
 
